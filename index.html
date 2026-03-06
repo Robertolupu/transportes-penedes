@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Transportes Penedes: transporte de mercancías nacional con flota moderna, entregas seguras y atención personalizada."
+    />
+    <title>Transportes Penedes | Logística que sí cumple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <header class="site-header">
+      <a href="#" class="brand">Transportes Penedes</a>
+      <button class="menu-toggle" data-i18n-aria-label="menu.open" aria-label="Abrir menú">☰</button>
+      <nav class="nav-links">
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#ventajas" data-i18n="nav.advantages">Ventajas</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="lang-switch" aria-label="Language selector">
+        <button class="lang-btn active" data-lang-btn="es" type="button">ES</button>
+        <button class="lang-btn" data-lang-btn="en" type="button">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal">
+        <div class="hero-bg" aria-hidden="true">
+          <video autoplay muted loop playsinline>
+            <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-highway-1579/1080p.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero-content">
+          <p class="hero-kicker" data-i18n="hero.kicker">TRANSPORTE NACIONAL DE CONFIANZA</p>
+          <h1>
+            <span data-i18n="hero.title1">La ruta más segura</span>
+            <span data-i18n="hero.title2">para tus mercancías</span>
+          </h1>
+          <p data-i18n="hero.body">
+            Recogemos, transportamos y entregamos con puntualidad y control continuo.
+            Tu carga llega donde tiene que llegar, cuando tiene que llegar.
+          </p>
+          <div class="hero-cta">
+            <a href="#contacto" class="btn btn-primary" data-i18n="hero.ctaQuote">Solicitar presupuesto</a>
+            <a href="tel:+34667685691" class="btn btn-secondary" data-i18n="hero.ctaCall">Llamar ahora</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2 data-i18n="hero.cardTitle">Disponibilidad inmediata</h2>
+          <ul>
+            <li data-i18n="hero.card1">Respuesta rápida en menos de 24h</li>
+            <li data-i18n="hero.card2">Rutas adaptadas por zona y carga</li>
+            <li data-i18n="hero.card3">Seguimiento y comunicación constante</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="stats reveal" id="ventajas">
+        <article>
+          <h3 data-count="15">0</h3>
+          <p data-i18n="stats.years">Años en carretera</p>
+        </article>
+        <article>
+          <h3 data-count="98">0</h3>
+          <p data-i18n="stats.ontime">% entregas puntuales</p>
+        </article>
+        <article>
+          <h3 data-count="1200">0</h3>
+          <p data-i18n="stats.services">Servicios anuales</p>
+        </article>
+        <article>
+          <h3 data-count="24">0</h3>
+          <p data-i18n="stats.support">Atención en horas</p>
+        </article>
+      </section>
+
+      <section class="services reveal" id="servicios">
+        <div class="section-head">
+          <p data-i18n="services.kicker">Qué hacemos</p>
+          <h2 data-i18n="services.title">Servicios diseñados para empresas que no pueden fallar</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <h3 data-i18n="services.ftlTitle">Carga completa (FTL)</h3>
+            <p data-i18n="services.ftlBody">
+              Soluciones directas de origen a destino para mercancía de gran volumen
+              con máxima eficiencia de tiempos.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3 data-i18n="services.ltlTitle">Carga fraccionada (LTL)</h3>
+            <p data-i18n="services.ltlBody">
+              Consolidamos rutas para optimizar costes manteniendo control y calidad
+              en cada entrega.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3 data-i18n="services.nationalTitle">Distribución nacional</h3>
+            <p data-i18n="services.nationalBody">
+              Cobertura en toda España con planificación flexible para picos de demanda.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3 data-i18n="services.customTitle">Logística a medida</h3>
+            <p data-i18n="services.customBody">
+              Adaptamos el servicio a tu operativa, ventanas horarias y requisitos de
+              cada cliente final.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="media reveal" id="media">
+        <div class="section-head">
+          <p data-i18n="media.kicker">Nuestra flota</p>
+          <h2 data-i18n="media.title">Camiones listos para mover tu negocio</h2>
+        </div>
+        <div class="media-grid">
+          <article class="media-card media-photo">
+            <img
+              src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=1400&q=80"
+              alt="Camión de mercancías en ruta"
+              loading="lazy"
+            />
+            <p data-i18n="media.photo1">Flota moderna preparada para rutas de larga distancia.</p>
+          </article>
+          <article class="media-card media-photo">
+            <img
+              src="https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=1400&q=80"
+              alt="Camión en plataforma logística"
+              loading="lazy"
+            />
+            <p data-i18n="media.photo2">Operativa coordinada para entregas puntuales.</p>
+          </article>
+          <article class="media-card media-video">
+            <video controls muted loop playsinline poster="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80">
+              <source src="https://cdn.coverr.co/videos/coverr-scenic-road-through-the-forest-1562677257013?download=1080p" type="video/mp4" />
+            </video>
+            <p data-i18n="media.video">Vista real de carretera: seguridad y ritmo constante de entrega.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials reveal">
+        <div class="section-head">
+          <p data-i18n="testimonials.kicker">Clientes satisfechos</p>
+          <h2 data-i18n="testimonials.title">Empresas que ya confían en Transportes Penedes</h2>
+        </div>
+        <div class="testimonial-box" id="testimonialBox">
+          <blockquote id="testimonialText"></blockquote>
+          <p id="testimonialAuthor"></p>
+        </div>
+        <div class="testimonial-controls">
+          <button id="prevTestimonial" data-i18n-aria-label="testimonials.prev" aria-label="Anterior">←</button>
+          <button id="nextTestimonial" data-i18n-aria-label="testimonials.next" aria-label="Siguiente">→</button>
+        </div>
+      </section>
+
+      <section class="contact reveal" id="contacto">
+        <div class="contact-copy">
+          <p class="contact-tag" data-i18n="contact.kicker">Contacto</p>
+          <h2 data-i18n="contact.title">Cuéntanos qué necesitas mover</h2>
+          <p data-i18n="contact.body">
+            Te enviamos una propuesta clara, rápida y adaptada a tu operativa.
+          </p>
+          <ul>
+            <li><strong data-i18n="contact.phoneLabel">Teléfono:</strong> +34 667 68 56 91</li>
+            <li><strong data-i18n="contact.emailLabel">Email:</strong> info@transportespenedes.es </li>
+            <li><strong data-i18n="contact.locationLabel">Ubicación:</strong> L'Arboç, Tarragona, España</li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>
+            <span data-i18n="contact.company">Empresa</span>
+            <input type="text" name="empresa" data-i18n-placeholder="contact.companyPlaceholder" placeholder="Tu empresa" required />
+          </label>
+          <label>
+            <span data-i18n="contact.person">Persona de contacto</span>
+            <input type="text" name="contacto" data-i18n-placeholder="contact.personPlaceholder" placeholder="Nombre y apellidos" required />
+          </label>
+          <label>
+            <span data-i18n="contact.email">Email</span>
+            <input type="email" name="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="correo@empresa.com" required />
+          </label>
+          <label>
+            <span data-i18n="contact.message">Qué necesitas transportar</span>
+            <textarea name="mensaje" rows="4" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Tipo de mercancía, origen, destino y fecha" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Enviar solicitud</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span data-i18n="footer.rights">Todos los derechos reservados.</span> © <span id="year"></span> Transportes Penedes.</p>
+    </footer>
+
+    <a
+      id="whatsappFloat"
+      class="whatsapp-float"
+      href="https://wa.me/34667685691?text=Hola%2C%20quiero%20presupuesto%20de%20transporte"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-i18n-aria-label="whatsapp.aria"
+      aria-label="Hablar por WhatsApp"
+    >
+      <span class="whatsapp-mark">WA</span>
+      <span data-i18n="whatsapp.text">Habla por WhatsApp</span>
+    </a>
+
+    <script src="app.js"></script>
+  </body>
+</html>

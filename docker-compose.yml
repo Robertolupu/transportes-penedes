@@ -1,0 +1,22 @@
+services:
+  contact-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: transportes-penedes-contact-api
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: transportes-penedes-web
+    depends_on:
+      - contact-api
+    env_file:
+      - .env
+    ports:
+      - "${WEB_PORT:-5180}:80"
+    restart: unless-stopped
