@@ -21,7 +21,9 @@
     <div class="bg-glow bg-glow-2"></div>
 
     <header class="site-header">
-      <a href="#" class="brand">Transportes Penedes</a>
+      <a href="#" class="brand">
+        <img src="archive/logos/logo_con_titulo.png" alt="Transportes Penedes" class="brand-logo-title" />
+      </a>
       <button class="menu-toggle" data-i18n-aria-label="menu.open" aria-label="Abrir menú">☰</button>
       <nav class="nav-links">
         <a href="#servicios" data-i18n="nav.services">Servicios</a>
@@ -37,9 +39,7 @@
     <main>
       <section class="hero reveal">
         <div class="hero-bg" aria-hidden="true">
-          <video autoplay muted loop playsinline>
-            <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-highway-1579/1080p.mp4" type="video/mp4" />
-          </video>
+          <img src="archive/img/IMG_3696.jpeg" alt="" />
         </div>
         <div class="hero-content">
           <p class="hero-kicker" data-i18n="hero.kicker">TRANSPORTE NACIONAL DE CONFIANZA</p>
@@ -126,29 +126,39 @@
           <p data-i18n="media.kicker">Nuestra flota</p>
           <h2 data-i18n="media.title">Camiones listos para mover tu negocio</h2>
         </div>
-        <div class="media-grid">
-          <article class="media-card media-photo">
-            <img
-              src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=1400&q=80"
-              alt="Camión de mercancías en ruta"
-              loading="lazy"
-            />
-            <p data-i18n="media.photo1">Flota moderna preparada para rutas de larga distancia.</p>
-          </article>
-          <article class="media-card media-photo">
-            <img
-              src="https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=1400&q=80"
-              alt="Camión en plataforma logística"
-              loading="lazy"
-            />
-            <p data-i18n="media.photo2">Operativa coordinada para entregas puntuales.</p>
-          </article>
-          <article class="media-card media-video">
-            <video controls muted loop playsinline poster="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80">
-              <source src="https://cdn.coverr.co/videos/coverr-scenic-road-through-the-forest-1562677257013?download=1080p" type="video/mp4" />
-            </video>
-            <p data-i18n="media.video">Vista real de carretera: seguridad y ritmo constante de entrega.</p>
-          </article>
+        <div class="gallery-shell">
+          <button class="gallery-nav prev" id="galleryPrev" type="button" aria-label="Anterior">←</button>
+          <div class="gallery-track-wrap">
+            <div class="gallery-track" id="galleryTrack">
+              <article class="gallery-slide">
+                <img src="archive/img/IMG_6828.jpeg" alt="Camión de Transportes Penedes en ruta nacional" loading="lazy" />
+              </article>
+              <article class="gallery-slide">
+                <img src="archive/img/IMG_7290.jpeg" alt="Camión de Transportes Penedes en zona de carga" loading="lazy" />
+              </article>
+              <article class="gallery-slide">
+                <img src="archive/img/IMG_7089.jpeg" alt="Flota de Transportes Penedes preparada para servicio" loading="lazy" />
+              </article>
+              <article class="gallery-slide">
+                <img src="archive/img/IMG_6654.jpeg" alt="Camión de Transportes Penedes en carretera" loading="lazy" />
+              </article>
+              <article class="gallery-slide">
+                <img src="archive/img/IMG_6656.jpeg" alt="Camión de Transportes Penedes estacionado en plataforma" loading="lazy" />
+              </article>
+              <article class="gallery-slide">
+                <img src="archive/img/IMG_5689.jpeg" alt="Detalle de camión de Transportes Penedes" loading="lazy" />
+              </article>
+            </div>
+          </div>
+          <button class="gallery-nav next" id="galleryNext" type="button" aria-label="Siguiente">→</button>
+        </div>
+        <div class="gallery-dots" id="galleryDots" aria-label="Paginación galería">
+          <button class="active" type="button" aria-label="Slide 1"></button>
+          <button type="button" aria-label="Slide 2"></button>
+          <button type="button" aria-label="Slide 3"></button>
+          <button type="button" aria-label="Slide 4"></button>
+          <button type="button" aria-label="Slide 5"></button>
+          <button type="button" aria-label="Slide 6"></button>
         </div>
       </section>
 
@@ -207,6 +217,11 @@
       <p><span data-i18n="footer.rights">Todos los derechos reservados.</span> © <span id="year"></span> Transportes Penedes.</p>
     </footer>
 
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar">✕</button>
+      <img id="lightboxImage" src="" alt="" />
+    </div>
+
     <a
       id="whatsappFloat"
       class="whatsapp-float"
@@ -216,7 +231,9 @@
       data-i18n-aria-label="whatsapp.aria"
       aria-label="Hablar por WhatsApp"
     >
-      <span class="whatsapp-mark">WA</span>
+      <span class="whatsapp-mark">
+        <img src="archive/logos/solo_logo.png" alt="" />
+      </span>
       <span data-i18n="whatsapp.text">Habla por WhatsApp</span>
     </a>
 

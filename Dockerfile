@@ -6,5 +6,6 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html ./
 COPY styles.css ./
 COPY app.js ./
+COPY archive ./archive
 
 EXPOSE 80
