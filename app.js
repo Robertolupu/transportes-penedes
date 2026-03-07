@@ -41,10 +41,6 @@ const i18n = {
     'media.photo1': 'Flota moderna preparada para rutas de larga distancia.',
     'media.photo2': 'Operativa coordinada para entregas puntuales.',
     'media.video': 'Vista real de carretera: seguridad y ritmo constante de entrega.',
-    'testimonials.kicker': 'Clientes satisfechos',
-    'testimonials.title': 'Empresas que ya confían en Transportes Penedes',
-    'testimonials.prev': 'Anterior',
-    'testimonials.next': 'Siguiente',
     'contact.kicker': 'Contacto',
     'contact.title': 'Cuéntanos qué necesitas mover',
     'contact.body': 'Te enviamos una propuesta clara, rápida y adaptada a tu operativa.',
@@ -108,10 +104,6 @@ const i18n = {
     'media.photo1': 'A modern fleet prepared for long-distance routes.',
     'media.photo2': 'Coordinated operations for on-time deliveries.',
     'media.video': 'Real road footage: safety and consistent delivery rhythm.',
-    'testimonials.kicker': 'Happy clients',
-    'testimonials.title': 'Companies already trusting Transportes Penedes',
-    'testimonials.prev': 'Previous',
-    'testimonials.next': 'Next',
     'contact.kicker': 'Contact',
     'contact.title': 'Tell us what you need to move',
     'contact.body': 'We will send you a clear and fast proposal tailored to your operation.',
@@ -139,39 +131,7 @@ const i18n = {
 
 document.documentElement.classList.add('js-enabled');
 
-const testimonialsByLang = {
-  es: [
-    {
-      text: 'Desde que trabajamos con ellos, hemos reducido incidencias y mejorado nuestros plazos de entrega.',
-      author: 'Marina Soler, Responsable de Operaciones',
-    },
-    {
-      text: 'Comunicación clara, trato profesional y una puntualidad excelente en cada servicio.',
-      author: 'Javier Moreno, Director de Compras',
-    },
-    {
-      text: 'Nos resolvieron una ruta urgente con total fiabilidad. Repetiremos sin duda.',
-      author: 'Laura V., Coordinadora Logística',
-    },
-  ],
-  en: [
-    {
-      text: 'Since working with them, we have reduced incidents and improved delivery deadlines.',
-      author: 'Marina Soler, Operations Manager',
-    },
-    {
-      text: 'Clear communication, professional handling, and excellent punctuality in every service.',
-      author: 'Javier Moreno, Procurement Director',
-    },
-    {
-      text: 'They solved an urgent route with full reliability. We will definitely work with them again.',
-      author: 'Laura V., Logistics Coordinator',
-    },
-  ],
-};
-
 let currentLang = 'es';
-let testimonialIndex = 0;
 let statsAnimated = false;
 
 function applyTranslations() {
@@ -214,7 +174,6 @@ function applyTranslations() {
     });
   }
 
-  renderTestimonial();
 }
 
 const revealEls = document.querySelectorAll('.reveal');
@@ -245,6 +204,14 @@ function animateCounter(el) {
 
 const statsSection = document.querySelector('.stats');
 const countEls = document.querySelectorAll('[data-count]');
+const yearsCounterEl = document.getElementById('yearsCounter');
+
+if (yearsCounterEl) {
+  const baseYear = Number(yearsCounterEl.dataset.baseYear || 2023);
+  const currentYear = new Date().getFullYear();
+  yearsCounterEl.dataset.count = String(Math.max(0, currentYear - baseYear));
+}
+
 const statsObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -257,32 +224,6 @@ const statsObserver = new IntersectionObserver(
   { threshold: 0.5 }
 );
 if (statsSection) statsObserver.observe(statsSection);
-
-const textEl = document.getElementById('testimonialText');
-const authorEl = document.getElementById('testimonialAuthor');
-const prevBtn = document.getElementById('prevTestimonial');
-const nextBtn = document.getElementById('nextTestimonial');
-
-function renderTestimonial() {
-  if (!textEl || !authorEl) return;
-  const items = testimonialsByLang[currentLang];
-  const current = items[testimonialIndex % items.length];
-  textEl.textContent = `"${current.text}"`;
-  authorEl.textContent = current.author;
-}
-
-function moveTestimonial(step) {
-  const items = testimonialsByLang[currentLang];
-  testimonialIndex = (testimonialIndex + step + items.length) % items.length;
-  renderTestimonial();
-}
-
-if (prevBtn && nextBtn) {
-  prevBtn.addEventListener('click', () => moveTestimonial(-1));
-  nextBtn.addEventListener('click', () => moveTestimonial(1));
-}
-
-setInterval(() => moveTestimonial(1), 6000);
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');

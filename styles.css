@@ -467,44 +467,6 @@ main {
   font-weight: 600;
 }
 
-.testimonial-box {
-  background: linear-gradient(125deg, #0c629d, #13345a);
-  color: #fff;
-  border-radius: var(--radius);
-  padding: 1.1rem;
-  min-height: 160px;
-  display: grid;
-  align-content: center;
-  gap: 0.6rem;
-}
-
-.testimonial-box blockquote {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.testimonial-box p {
-  margin: 0;
-  font-weight: 700;
-  color: #cdeaff;
-}
-
-.testimonial-controls {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
-}
-
-.testimonial-controls button {
-  border: 0;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  width: 42px;
-  height: 42px;
-  cursor: pointer;
-}
-
 .contact {
   margin-top: 2.4rem;
   display: grid;
