@@ -12,6 +12,7 @@ COPY apple-touch-icon.png ./
 COPY favicon-v4.ico ./
 COPY favicon-v4.png ./
 COPY apple-touch-icon-v4.png ./
+COPY site.webmanifest ./
 COPY archive ./archive
 
 EXPOSE 80
